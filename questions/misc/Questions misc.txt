@@ -1,0 +1,88 @@
+Questions sur des situations sécurisées :
+
+1- OUI
+Utilisez-vous un gestionnaire de mots de passe pour sécuriser vos identifiants ?
+Explication : Les gestionnaires de mots de passe permettent de créer et de stocker des mots de passe uniques et complexes, réduisant ainsi le risque de piratage de comptes.
+
+2-OUI	
+Avez-vous activé l'authentification à deux facteurs (2FA) sur vos comptes les plus importants ?
+Explication : La 2FA ajoute une couche supplémentaire de sécurité en demandant une seconde forme de vérification, rendant l'accès plus difficile aux attaquants.
+
+3-OUI	
+Est-ce que votre réseau Wi-Fi est protégé par un mot de passe complexe et sécurisé utilisant le protocole WPA3 ?
+Explication : Un mot de passe complexe et un protocole moderne comme WPA3 garantissent une meilleure protection contre les intrusions non autorisées.
+
+4-OUI	
+Téléchargez-vous toujours des logiciels à partir de sites officiels ou de sources vérifiées ?
+Explication : Télécharger des logiciels à partir de sources fiables limite le risque de télécharger des programmes infectés par des malwares.
+
+5-OUI	
+Vérifiez-vous systématiquement l'adresse e-mail de l'expéditeur avant d'ouvrir une pièce jointe ?
+Explication : Vérifier l'expéditeur permet d'éviter de tomber dans des pièges de phishing qui peuvent installer des logiciels malveillants sur votre appareil.
+
+6-OUI	
+Votre antivirus est-il régulièrement mis à jour et programmé pour effectuer des analyses automatiques ?
+Explication : Un antivirus à jour est essentiel pour protéger contre les nouvelles menaces et les virus qui évoluent constamment.
+
+7-OUI	
+Appliquez-vous immédiatement les mises à jour de sécurité sur votre système d'exploitation et vos applications ?
+Explication : Les mises à jour corrigent souvent des failles de sécurité, empêchant ainsi les cybercriminels de les exploiter.
+
+8-OUI	
+Désactivez-vous le Bluetooth et le Wi-Fi sur votre téléphone lorsque vous ne les utilisez pas ?
+Explication : Laisser le Bluetooth et le Wi-Fi actifs peut permettre aux attaquants de s’y connecter sans autorisation.
+
+9-OUI
+Utilisez-vous un VPN lorsque vous accédez à des réseaux Wi-Fi publics ?
+Explication : Un VPN chiffre votre connexion, protégeant ainsi vos données personnelles et vos activités en ligne sur des réseaux non sécurisés.
+
+10-OUI	
+Vérifiez-vous la validité et la source des certificats numériques avant de transmettre des données sensibles sur un site web ?
+Explication : Les certificats numériques, tels que celui illustré, garantissent que la connexion est sécurisée et que le site est authentique. Un certificat émis par une autorité reconnue (comme Kaspersky Lab) et valide (comme indiqué par les dates d'émission et d'expiration) est essentiel pour assurer la confidentialité et la sécurité des données échangées.
+
+
+
+Questions sur des situations non sécurisées :
+11-NON
+Réutilisez-vous le même mot de passe pour plusieurs comptes en ligne ?
+Explication : Utiliser le même mot de passe pour plusieurs comptes facilite l'accès aux pirates en cas de compromission d'un seul compte.
+
+12-NON	
+Cliquez-vous sur des liens dans des e-mails provenant d'expéditeurs inconnus sans les vérifier ?
+Explication : Les e-mails d'inconnus peuvent contenir des liens de phishing, visant à voler vos informations personnelles ou infecter votre appareil.
+
+13-NON	
+Installez-vous des applications sur votre téléphone sans vérifier les autorisations demandées ?
+Explication : Les applications malveillantes peuvent demander des autorisations excessives pour accéder à vos données personnelles.
+
+14-NON	
+Téléchargez-vous des logiciels ou des films à partir de sites de partage non officiels et non sécurisés ?
+Explication : Ces sites peuvent contenir des fichiers infectés par des malwares, mettant en danger la sécurité de votre appareil.
+
+15-NON	
+Utilisez-vous des mots de passe simples comme "123456" ou "motdepasse" ?
+Explication : Les mots de passe simples sont faciles à deviner par des attaquants, mettant en péril la sécurité de vos comptes.
+
+16-NON	
+Désactivez-vous votre antivirus parce que vous trouvez qu'il ralentit votre ordinateur ?
+Explication : Désactiver l'antivirus expose votre appareil à de potentielles attaques sans protection active.
+
+17-NON	
+Laissez-vous vos appareils connectés à un réseau Wi-Fi public sans protection supplémentaire ?
+Explication : Les réseaux publics non sécurisés permettent aux attaquants de s’infiltrer facilement dans vos connexions et de voler des données.
+
+18-NON	
+Utilisez-vous encore une version obsolète de votre navigateur web sans la mettre à jour ?
+Explication : Les versions obsolètes de navigateurs contiennent souvent des failles de sécurité qui peuvent être exploitées par des cybercriminels.
+
+19-NON
+Partagez-vous des informations personnelles telles que votre adresse ou votre numéro de téléphone sur des forums publics ?
+Explication : Partager ces informations rend plus facile le ciblage par des personnes malintentionnées ou des arnaqueurs.
+
+20-NON	
+Que signifie lorsqu'un site web commence par "http" sans le "s" ?
+Explication : Lorsqu'un site commence par "http" au lieu de "https", cela signifie que la connexion n'est pas sécurisée. Les données échangées peuvent être interceptées par des tiers, ce qui augmente le risque de vol ou de compromission des informations.
+
+
+
+
