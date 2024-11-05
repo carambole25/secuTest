@@ -1,0 +1,251 @@
+question 1:
+Ce code est il dangereux ?
+Non
+L'utilisation de fgets permet de stopper le programme si le buffer est dépassé.
+
+question 2:
+Ce code est il dangereux ?
+Non
+Il n'y a rien de dangereux
+
+question 3:
+Ce code est il dangereux
+Oui
+Même si on vérifier l'extension on ne modifie pas le nom ce qui peu écraser un fichier déja existant.
+
+question 4:
+Ce code est il dangereux
+Non
+Il n'y a rien de dangereux
+
+question 5:
+Ce code est il dangereux
+Oui
+Même si la clé d'API est assez robuste elle est en clair dans le code
+
+question 6:
+Ce code est il dangereux
+Non
+L'utilisation de htmlspecialchars permet de sécuriser l'entrée utilisateur
+
+question 7:
+Ce code est il dangereux
+Non
+L'utilisation d'une whitelist strict permet d'éviter les Local files inclusion
+
+question 8:
+Ce code est il dangereux
+Non
+L'utilisation d'une whitelist strict permet d'éviter une Remote code execution
+
+question 9:
+Ce code est il dangereux
+Non
+L'utilisation de pdo permet de parametrer la requête SQL et d'éviter les injections
+
+question 10:
+Ce code est il dangereux
+Non
+L'utilisation d'un token visiblement généré aléatoirement permet d'éviter une faille CSRF
+
+question 11:
+Ce code est il dangereux
+Oui
+Une RCE est possible, ls / ; whoami
+
+question 12:
+Ce code est il dangereux
+Oui
+La non utilisation de htmlspecialchars produit une faille Xss
+
+question 13:
+Ce code est il dangereux
+Oui
+Ce code permet une local file inclusion
+
+question 14:
+Ce code est il dangereux
+Oui
+Il y a une injection SQL
+
+question 15:
+Ce code est il dangereux
+Oui
+La page web peu être victime d'une attaque csrf
+
+question 16:
+Ce code est il dangereux
+Oui
+La clé d'API est trop faible et est encodé en dur dans le code
+
+question 17:
+Ce code est il dangereux
+Oui
+La fonction eval permet à n'import qui de manipuler le programme
+
+question 18:
+Ce code est il dangereux
+Oui
+L'upload de fichier n'est pas sécurisé car l'extension n'est pas vérifier.
+
+question 19:
+Ce code est il dangereux
+Oui
+Il y a un buffer overflow
+
+question 20:
+Ce code est il dangereux
+Oui
+On vérifie si il y a .png dans le nom mais un attaquant pourrait très bien mettre file.png.php
+
+question 21:
+Ce mdp est il sécurisé
+Oui
+Ce mot de passe est sécurisé. Il respecte tous les critères importants.
+
+question 22:
+Ce mdp est il sécurisé
+Oui
+Ce mot de passe est sécurisé. Il respecte tous les critères importants.
+
+question 23:
+Ce mdp est il sécurisé
+Oui
+Ce mot de passe est sécurisé. Il respecte tous les critères importants.
+
+question 24:
+Ce mdp est il sécurisé
+Oui
+Ce mot de passe est sécurisé. Il respecte tous les critères importants.
+
+question 25:
+Ce mdp est il sécurisé
+Oui
+Ce mot de passe est sécurisé. Il respecte tous les critères importants.
+
+question 26:
+Ce mdp est il sécurisé
+Non
+Un mot de passe sécurisé doit contenir au moins 12 caractères, combiner des lettres majuscules, minuscules, chiffres, et symboles.
+
+question 27:
+Ce mdp est il sécurisé
+Non
+Un mot de passe sécurisé doit contenir au moins 12 caractères, combiner des lettres majuscules, minuscules, chiffres, et symboles.
+
+question 28:
+Ce mdp est il sécurisé
+Non
+Un mot de passe sécurisé doit contenir au moins 12 caractères, combiner des lettres majuscules, minuscules, chiffres, et symboles.
+
+question 29:
+Ce mdp est il sécurisé
+Non
+Un mot de passe sécurisé doit contenir au moins 12 caractères, combiner des lettres majuscules, minuscules, chiffres, et symboles.
+
+question 30:
+Ce mdp est il sécurisé
+Non
+Un mot de passe sécurisé doit contenir au moins 12 caractères, combiner des lettres majuscules, minuscules, chiffres, et symboles.
+
+question 31:
+Le S dans HTTPS signifie saucisse ?
+Non
+Lorsqu'un site commence par "http" au lieu de "https", cela signifie que la connexion n'est pas sécurisée. Les données échangées peuvent être interceptées par des tiers, ce qui augmente le risque de vol ou de compromission des informations.
+
+question 32:
+Utilisez-vous un gestionnaire de mots de passe pour sécuriser vos identifiants ?
+Oui
+Explication : Les gestionnaires de mots de passe permettent de créer et de stocker des mots de passe uniques et complexes, réduisant ainsi le risque de piratage de comptes.
+
+question 33:
+Avez-vous activé l'authentification à deux facteurs (2FA) sur vos comptes les plus importants ?
+Oui
+La 2FA ajoute une couche supplémentaire de sécurité en demandant une seconde forme de vérification, rendant l'accès plus difficile aux attaquants.
+
+question 34:
+Est-ce que votre réseau Wi-Fi est protégé par un mot de passe complexe et sécurisé utilisant le protocole WPA3 ?
+Oui
+Un mot de passe complexe et un protocole moderne comme WPA3 garantissent une meilleure protection contre les intrusions non autorisées.
+
+question 35:
+Téléchargez-vous toujours des logiciels à partir de sites officiels ou de sources vérifiées ?
+Oui
+Télécharger des logiciels à partir de sources fiables limite le risque de télécharger des programmes infectés par des malwares.
+
+question 36:
+Vérifiez-vous systématiquement l'adresse e-mail de l'expéditeur avant d'ouvrir une pièce jointe ?
+Oui
+Vérifier l'expéditeur permet d'éviter de tomber dans des pièges de phishing qui peuvent installer des logiciels malveillants sur votre appareil.
+
+question 37:
+Votre antivirus est-il régulièrement mis à jour et programmé pour effectuer des analyses automatiques ?
+Oui
+Un antivirus à jour est essentiel pour protéger contre les nouvelles menaces et les virus qui évoluent constamment.
+
+question 38:
+Appliquez-vous immédiatement les mises à jour de sécurité sur votre système d'exploitation et vos applications ?
+Oui
+Les mises à jour corrigent souvent des failles de sécurité, empêchant ainsi les cybercriminels de les exploiter.
+
+question 39:
+Désactivez-vous le Bluetooth et le Wi-Fi sur votre téléphone lorsque vous ne les utilisez pas ?
+Oui
+Laisser le Bluetooth et le Wi-Fi actifs peut permettre aux attaquants de s’y connecter sans autorisation.
+
+question 40:
+Utilisez-vous un VPN lorsque vous accédez à des réseaux Wi-Fi publics ?
+Oui
+Un VPN chiffre votre connexion, protégeant ainsi vos données personnelles et vos activités en ligne sur des réseaux non sécurisés.
+
+question 41:
+Ce certificat est il valide ?
+Oui
+Les certificats numériques, tels que celui illustré, garantissent que la connexion est sécurisée et que le site est authentique. Un certificat émis par une autorité reconnue (comme Kaspersky Lab) et valide (comme indiqué par les dates d'émission et d'expiration) est essentiel pour assurer la confidentialité et la sécurité des données échangées.
+
+question 42:
+Réutilisez-vous le même mot de passe pour plusieurs comptes en ligne ?
+Non
+Utiliser le même mot de passe pour plusieurs comptes facilite l'accès aux pirates en cas de compromission d'un seul compte.
+
+question 43:
+Cliquez-vous sur des liens dans des e-mails provenant d'expéditeurs inconnus sans les vérifier ?
+Non
+Les e-mails d'inconnus peuvent contenir des liens de phishing, visant à voler vos informations personnelles ou infecter votre appareil.
+
+question 44:
+Installez-vous des applications sur votre téléphone sans vérifier les autorisations demandées ?
+Non
+Les applications malveillantes peuvent demander des autorisations excessives pour accéder à vos données personnelles.
+
+question 45:
+Téléchargez-vous des logiciels ou des films à partir de sites de partage non officiels et non sécurisés ?
+Non
+Ces sites peuvent contenir des fichiers infectés par des malwares, mettant en danger la sécurité de votre appareil.
+
+question 46:
+Utilisez-vous des mots de passe simples comme "123456" ou "motdepasse" ?
+Non
+Les mots de passe simples sont faciles à deviner par des attaquants, mettant en péril la sécurité de vos comptes.
+
+question 47:
+Désactivez-vous votre antivirus parce que vous trouvez qu'il ralentit votre ordinateur ?
+Non
+Désactiver l'antivirus expose votre appareil à de potentielles attaques sans protection active.
+
+question 48:
+Laissez-vous vos appareils connectés à un réseau Wi-Fi public sans protection supplémentaire ?
+Non
+Les réseaux publics non sécurisés permettent aux attaquants de s’infiltrer facilement dans vos connexions et de voler des données.
+
+question 49:
+Utilisez-vous encore une version obsolète de votre navigateur web sans la mettre à jour ?
+Non
+Les versions obsolètes de navigateurs contiennent souvent des failles de sécurité qui peuvent être exploitées par des cybercriminels.
+
+question 50:
+Partagez-vous des informations personnelles telles que votre adresse ou votre numéro de téléphone sur des forums publics ?
+Non
+Partager ces informations rend plus facile le ciblage par des personnes malintentionnées ou des arnaqueurs.
+
+
