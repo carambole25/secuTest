@@ -3,6 +3,7 @@ hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbo
 
 body{
     overflow: hidden;
+    height: 100vh;
 }
 
 nav{
@@ -20,169 +21,154 @@ nav{
     font-weight: bold;
 }
 
-nav>div{
+nav > div {
     width: 30%;
     text-align: center;
 }
 
-.link-container{
-    position: fixed;
-    top: 3vh;
-    right: 1vw;
-    z-index: 1;
-    font-family: Roboto, sans-serif;
-    font-weight: bold;
-}
+@media screen and (orientation: landscape) {
 
-.link-container>a{
-    text-decoration: none;
-    color: white;
-    animation: color-change 5s infinite;
-    padding: 15px 10px 15px 10px;
-    border-radius: 10px;
-}
+    nav > div {
+        width: 30%;
+        text-align: center;
+    }
+
+    .link-container {
+        position: fixed;
+        top: 3vh;
+        right: 1vw;
+        z-index: 1;
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+    }
+
+    .link-container > a {
+        text-decoration: none;
+        color: white;
+        animation: color-change 5s infinite;
+        padding: 15px 10px 15px 10px;
+        border-radius: 10px;
+    }
 
 
-.container {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-}
+    .container {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
 
-.exercise-container{
-    min-height: 75vh;
-    min-width: 20vw;
-    height: 70%;
-    width: 30%;
-}
+    .exercise-container {
+        min-height: 75vh;
+        min-width: 20vw;
+        height: 70%;
+        width: 30%;
+    }
 
-.card {
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    border: 3px solid black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 25px;
-    cursor: grab;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-.card>img{
-    border-radius: 22px;
-    width:100%;
-    aspect-ratio: 1.5;
-    -webkit-user-drag: none; /* For Safari and Chrome */
-    user-drag: none;
-    pointer-events: none; /* Prevents dragging and clicking */
-}
+    .card {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border: 3px solid black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+        cursor: grab;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
 
-.question-content-container {
-    font-family: Roboto, sans-serif;
-    font-weight: bolder;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-}
-.question-content-container>p{
-    padding: 20px;
-}
+    .card > img {
+        border-radius: 22px;
+        width: 100%;
+        aspect-ratio: 1.5;
+        -webkit-user-drag: none; /* For Safari and Chrome */
+        user-drag: none;
+        pointer-events: none; /* Prevents dragging and clicking */
+    }
 
-.buttons-container {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-evenly;
-}
+    .question-content-container {
+        font-family: Roboto, sans-serif;
+        font-weight: bolder;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
 
-.button {
-    z-index: 1;
-    margin: 0 10px 0 10px;
-    /*margin-top: 20px;*/
-    height: 8vh;
-    aspect-ratio: 2;
-    border-radius: 10px;
-    font-family: Roboto, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-    font-weight: bolder;
-    border: 2px solid black;
-    cursor: pointer;
-}
+    .question-content-container > p {
+        padding: 20px;
+    }
 
-#button-false {
-    background: #c12d2d;
-}
+    .buttons-container {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+    }
 
-#button-true{
-    background: #257025;
-}
+    .button {
+        z-index: 1;
+        margin: 0 10px 0 10px;
+        /*margin-top: 20px;*/
+        height: 8vh;
+        aspect-ratio: 2;
+        border-radius: 10px;
+        font-family: Roboto, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+        font-weight: bolder;
+        border: 2px solid black;
+        cursor: pointer;
+    }
 
-.overlay {
-    width: 33.33%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    transition: background-image 0.3s;
-    pointer-events: none; /* Makes the overlays non-interactive */
-}
+    #button-false {
+        background: #c12d2d;
+    }
 
-.left {
-    left: 0;
-}
+    #button-true {
+        background: #257025;
+    }
 
-.right {
-    right: 0;
-}
+    .wave-container {
+        position: absolute;
+        width: 200%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
 
-.glow-red {
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70%);
-}
+    .wave {
+        position: fixed;
+        width: 200%;
+        height: 90%;
+        left: -100vw; /* Added this line */
+        clip-path: polygon(0 44%, 9% 40%, 21% 38%, 32% 38%, 43% 39%, 52% 42%, 64% 45%, 80% 47%, 93% 46%, 100% 43%, 100% 100%, 0% 100%);
+        animation: moveLeftRight 10s linear infinite;
+    }
 
-.glow-green {
-    background-image: linear-gradient(to left, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70%);
-}
+    .wave1 {
+        /*background: darkblue;*/
+        top: 0;
+    }
 
-.wave-container{
-    position: absolute;
-    width: 200%;
-    height: 100vh;
-    top:0;
-    left:0;
-}
+    .wave2 {
+        /*background: #000070;*/
+        top: 100px;
+    }
 
-.wave {
-    position: fixed;
-    width: 200%;
-    height: 90%;
-    left: -100vw; /* Added this line */
-    clip-path: polygon(0 44%, 9% 40%, 21% 38%, 32% 38%, 43% 39%, 52% 42%, 64% 45%, 80% 47%, 93% 46%, 100% 43%, 100% 100%, 0% 100%);
-    animation: moveLeftRight 10s linear infinite;
-}
-
-.wave1 {
-    /*background: darkblue;*/
-    top: 0;
-}
-
-.wave2 {
-    /*background: #000070;*/
-    top: 100px;
-}
-
-.wave3 {
-    /*background: #000037;*/
-    top: 300px;
+    .wave3 {
+        /*background: #000037;*/
+        top: 300px;
+    }
 }
 
 .noselect {
@@ -193,8 +179,12 @@ nav>div{
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }
-
 
 @keyframes color-change {
     0%   { background-color: #882a2a; }
@@ -211,5 +201,139 @@ nav>div{
     }
     100% {
         left: -100vw;
+    }
+}
+
+.noscroll{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+@media screen and (orientation: portrait) {
+
+    nav>div{
+        font-size: 3rem;
+    }
+
+    .container {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .exercise-container {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .card {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border: 3px solid black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 50px;
+        cursor: grab;
+        position: relative;
+        transition: transform 0.3s ease;
+        font-size: 3rem;
+        font-family: Roboto, sans-serif;
+    }
+
+    .card > img {
+        border-radius: 50px;
+        width: 100%;
+        aspect-ratio: 1.5;
+        -webkit-user-drag: none; /* For Safari and Chrome */
+        user-drag: none;
+        pointer-events: none; /* Prevents dragging and clicking */
+    }
+
+    .question-content-container {
+        font-family: Roboto, sans-serif;
+        font-weight: bolder;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .question-content-container > p {
+        padding: 20px;
+    }
+
+    .buttons-container {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .button {
+        z-index: 1;
+        margin: 0 10px 0 10px;
+        /*margin-top: 20px;*/
+        height: 8vh;
+        aspect-ratio: 2;
+        border-radius: 25px;
+        font-family: Roboto, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        color: white;
+        font-weight: bolder;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+
+    #button-false {
+        background: #c12d2d;
+    }
+
+    #button-true {
+        background: #257025;
+    }
+
+    .wave-container {
+        overflow: hidden;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    .wave {
+        position: fixed;
+        width: 200%;
+        height: 90%;
+        left: -100vw; /* Added this line */
+        clip-path: polygon(0 44%, 9% 40%, 21% 38%, 32% 38%, 43% 39%, 52% 42%, 64% 45%, 80% 47%, 93% 46%, 100% 43%, 100% 100%, 0% 100%);
+        animation: moveLeftRight 10s linear infinite;
+    }
+
+    .wave1 {
+        /*background: darkblue;*/
+        top: 0;
+    }
+
+    .wave2 {
+        /*background: #000070;*/
+        top: 100px;
+    }
+
+    .wave3 {
+        /*background: #000037;*/
+        top: 300px;
     }
 }

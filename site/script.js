@@ -179,28 +179,36 @@ function onTransitionEnd(e) {
 // Handle move to change wave colors based on position
 function handleMove(clientX) {
     const width = window.innerWidth;
+    const height = window.innerHeight;
 
-    // Calculate intensity based on distance from the edge
-    const intensityLeft = Math.max(0, (width / 3 - clientX) / (width / 2));
-    const intensityRight = Math.max(0, (clientX - (width) / 2) / (width / 2));
+    // Check if the screen is in landscape mode
+    if (width > height) {
+        // Calculate intensity based on distance from the edge
+        const intensityLeft = Math.max(0, (width / 3 - clientX) / (width / 2));
+        const intensityRight = Math.max(0, (clientX - (width) / 2) / (width / 2));
 
-    if (intensityLeft > 0) {
-        // Interpolate between blue and red
-        waves.forEach((wave, index) => {
-            let newColor = interpolateColor(blueColors[index], redColors[index], intensityLeft);
-            wave.style.background = `rgb(${newColor[0]}, ${newColor[1]}, ${newColor[2]})`;
-        });
-    } else if (intensityRight > 0) {
-        // Interpolate between blue and green
-        waves.forEach((wave, index) => {
-            let newColor = interpolateColor(blueColors[index], greenColors[index], intensityRight);
-            wave.style.background = `rgb(${newColor[0]}, ${newColor[1]}, ${newColor[2]})`;
-        });
+        if (intensityLeft > 0) {
+            // Interpolate between blue and red
+            waves.forEach((wave, index) => {
+                let newColor = interpolateColor(blueColors[index], redColors[index], intensityLeft);
+                wave.style.background = `rgb(${newColor[0]}, ${newColor[1]}, ${newColor[2]})`;
+            });
+        } else if (intensityRight > 0) {
+            // Interpolate between blue and green
+            waves.forEach((wave, index) => {
+                let newColor = interpolateColor(blueColors[index], greenColors[index], intensityRight);
+                wave.style.background = `rgb(${newColor[0]}, ${newColor[1]}, ${newColor[2]})`;
+            });
+        } else {
+            // Set waves back to blue
+            setInitialColors();
+        }
     } else {
-        // Set waves back to blue
+        // In portrait mode, keep waves at their initial color
         setInitialColors();
     }
 }
+
 
 // Add event listeners for mouse and touch
 card.addEventListener('mousedown', onDragStart);
