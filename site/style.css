@@ -1,0 +1,215 @@
+hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+
+body{
+    overflow: hidden;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99.9%;
+    height: 5vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+nav>div{
+    width: 30%;
+    text-align: center;
+}
+
+.link-container{
+    position: fixed;
+    top: 3vh;
+    right: 1vw;
+    z-index: 1;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
+.link-container>a{
+    text-decoration: none;
+    color: white;
+    animation: color-change 5s infinite;
+    padding: 15px 10px 15px 10px;
+    border-radius: 10px;
+}
+
+
+.container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.exercise-container{
+    min-height: 75vh;
+    min-width: 20vw;
+    height: 70%;
+    width: 30%;
+}
+
+.card {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: 3px solid black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    cursor: grab;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.card>img{
+    border-radius: 22px;
+    width:100%;
+    aspect-ratio: 1.5;
+    -webkit-user-drag: none; /* For Safari and Chrome */
+    user-drag: none;
+    pointer-events: none; /* Prevents dragging and clicking */
+}
+
+.question-content-container {
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.question-content-container>p{
+    padding: 20px;
+}
+
+.buttons-container {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    z-index: 1;
+    margin: 0 10px 0 10px;
+    /*margin-top: 20px;*/
+    height: 8vh;
+    aspect-ratio: 2;
+    border-radius: 10px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#button-false {
+    background: #c12d2d;
+}
+
+#button-true{
+    background: #257025;
+}
+
+.overlay {
+    width: 33.33%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    transition: background-image 0.3s;
+    pointer-events: none; /* Makes the overlays non-interactive */
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.glow-red {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70%);
+}
+
+.glow-green {
+    background-image: linear-gradient(to left, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70%);
+}
+
+.wave-container{
+    position: absolute;
+    width: 200%;
+    height: 100vh;
+    top:0;
+    left:0;
+}
+
+.wave {
+    position: fixed;
+    width: 200%;
+    height: 90%;
+    left: -100vw; /* Added this line */
+    clip-path: polygon(0 44%, 9% 40%, 21% 38%, 32% 38%, 43% 39%, 52% 42%, 64% 45%, 80% 47%, 93% 46%, 100% 43%, 100% 100%, 0% 100%);
+    animation: moveLeftRight 10s linear infinite;
+}
+
+.wave1 {
+    /*background: darkblue;*/
+    top: 0;
+}
+
+.wave2 {
+    /*background: #000070;*/
+    top: 100px;
+}
+
+.wave3 {
+    /*background: #000037;*/
+    top: 300px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+@keyframes color-change {
+    0%   { background-color: #882a2a; }
+    50%  { background-color: #2b2b6a; }
+    100% { background-color: #882a2a; }
+}
+
+@keyframes moveLeftRight {
+    0% {
+        left: -100vw;
+    }
+    50% {
+        left: 0;
+    }
+    100% {
+        left: -100vw;
+    }
+}
